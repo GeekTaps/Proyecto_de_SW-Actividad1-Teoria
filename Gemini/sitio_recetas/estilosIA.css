@@ -1,0 +1,317 @@
+/* Estilos Principales - Paleta Verde Opaca y Dorado */
+:root {
+    --verde-oscuro: #2d4a3e;
+    --verde-medio: #4a6b5d;
+    --verde-suave: #87a094;
+    --verde-fondo: #f2f5f3;
+    --dorado: #d4af37;
+    --dorado-hover: #b89628;
+    --blanco: #ffffff;
+    --texto: #22312a;
+    --borde-card: #3a5a4c;
+    --relleno-card: #e8eee9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--verde-fondo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* Header y Navegación */
+header {
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    border-bottom: 4px solid var(--dorado);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: block;
+    text-align: center;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--dorado);
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+nav ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--verde-medio);
+    color: var(--dorado);
+}
+
+/* Layout Principal */
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.section-block {
+    background: var(--blanco);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-top: 3px solid var(--verde-medio);
+}
+
+.section-title {
+    font-size: 1.6rem;
+    color: var(--verde-oscuro);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--dorado);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+/* Selector CSS Puro (Pure CSS Tabs / Radio Filter) */
+.filter-controls {
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: var(--verde-oscuro);
+    padding: 1.2rem;
+    border-radius: 8px;
+    color: var(--blanco);
+}
+
+.filter-controls label.radio-label {
+    display: inline-block;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: #e0e0e0;
+}
+
+.filter-controls input[type="radio"] {
+    margin-right: 6px;
+    accent-color: var(--dorado);
+    transform: scale(1.2);
+}
+
+.filter-controls input[type="radio"]:checked + span {
+    color: var(--dorado);
+    text-decoration: underline;
+}
+
+/* Ocultar/Mostrar Recetas según Selección */
+#cat-todas:checked ~ .recetas-grid .receta-card {
+    display: block;
+}
+
+#cat-salado:checked ~ .recetas-grid .receta-card[data-categoria="salado"] {
+    display: block;
+}
+#cat-salado:checked ~ .recetas-grid .receta-card[data-categoria="dulce"] {
+    display: none;
+}
+
+#cat-dulce:checked ~ .recetas-grid .receta-card[data-categoria="dulce"] {
+    display: block;
+}
+#cat-dulce:checked ~ .recetas-grid .receta-card[data-categoria="salado"] {
+    display: none;
+}
+
+/* Grid de Recetas */
+.recetas-grid {
+    text-align: center;
+}
+
+/* Card de Receta con Borde y Relleno armónicos (Requisito 4) */
+.receta-card {
+    display: inline-block;
+    vertical-align: top;
+    width: 280px;
+    margin: 15px;
+    text-align: center;
+    
+    /* Cumplimiento de la consigna: borde y relleno específicos */
+    border: 3px solid var(--borde-card);
+    background-color: var(--relleno-card);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.receta-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.receta-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--verde-medio);
+    margin-bottom: 12px;
+}
+
+.receta-card h3 {
+    font-size: 1.2rem;
+    color: var(--verde-oscuro);
+    margin-bottom: 12px;
+    min-height: 2.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-pdf {
+    display: inline-block;
+    background-color: var(--dorado);
+    color: var(--verde-oscuro);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--dorado-hover);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-pdf:hover {
+    background-color: var(--verde-oscuro);
+    color: var(--dorado);
+}
+
+/* Formulario de Contacto */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: var(--verde-oscuro);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--verde-suave);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #fafcfb;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--dorado);
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
+.btn-submit {
+    background-color: var(--verde-oscuro);
+    color: var(--dorado);
+    border: 2px solid var(--dorado);
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--dorado);
+    color: var(--verde-oscuro);
+}
+
+/* Sección Mantenedor */
+.mantenedor-info {
+    display: block;
+    text-align: center;
+}
+
+.mantenedor-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: var(--verde-medio);
+    color: var(--dorado);
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 110px;
+    margin: 0 auto 1rem auto;
+    border: 3px solid var(--dorado);
+}
+
+/* Footer */
+footer {
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    border-top: 4px solid var(--dorado);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 8px 0;
+    }
+    
+    .receta-card {
+        width: 100%;
+        max-width: 320px;
+        margin: 15px 0;
+    }
+    
+    .filter-controls label.radio-label {
+        display: block;
+        margin: 10px 0;
+    }
+}
