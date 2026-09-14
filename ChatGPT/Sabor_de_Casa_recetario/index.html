@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Recetario estático de recetas saladas y dulces.">
+  <title>Sabor de Casa · Recetario</title>
+  <link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#inicio" aria-label="Sabor de Casa, inicio">
+      <span class="brand-mark" aria-hidden="true">✦</span>
+      <span><strong>Sabor de Casa</strong><small>Recetas para compartir</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a><a href="#recetas">Recetas</a><a href="#contacto">Contacto</a><a href="#sitio">Sobre el sitio</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-content">
+      <p class="eyebrow">RECETARIO ESTÁTICO</p>
+      <h1 id="hero-title">Comidas simples, sabores que quedan.</h1>
+      <p>Explorá recetas saladas y dulces en un espacio claro, accesible y pensado para que cualquiera pueda encontrar algo rico para cocinar.</p>
+      <a class="button button-primary" href="#recetas">Explorar recetas</a>
+    </div>
+    <div class="hero-card" aria-hidden="true"><span>✦</span><strong>6 recetas</strong><small>3 saladas · 3 dulces</small></div>
+  </section>
+
+  <section id="recetas" class="recipes-section" aria-labelledby="recipes-title">
+    <div class="section-heading">
+      <div><p class="eyebrow">CATÁLOGO</p><h2 id="recipes-title">Elegí una categoría</h2></div>
+      <p class="section-intro">La selección funciona únicamente con HTML y CSS: no requiere JavaScript.</p>
+    </div>
+    <div class="filter-box">
+      <input type="radio" name="categoria" id="todas" checked>
+      <input type="radio" name="categoria" id="salado">
+      <input type="radio" name="categoria" id="dulce">
+      <div class="category-controls" role="group" aria-label="Filtrar recetas">
+        <label for="todas">Todas</label><label for="salado">Salado</label><label for="dulce">Dulce</label>
+      </div>
+      <div class="recipes-grid"><article class="recipe-card salado">
+      <div class="recipe-image-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Argentine_locro.jpg/1280px-Argentine_locro.jpg" alt="Fotografía de Locro argentino" loading="lazy">
+        <span class="category-badge">Salado</span>
+      </div>
+      <div class="recipe-content">
+        <p class="recipe-time">2 h 30 min</p>
+        <h3>Locro argentino</h3>
+        <p>Guiso tradicional, reconfortante y lleno de sabor, ideal para compartir.</p>
+        <div class="recipe-actions">
+          <a class="button button-gold" href="recetarios/receta1.pdf" target="_blank" rel="noopener">Ver receta en PDF</a>
+          <a class="source-link" href="https://commons.wikimedia.org/wiki/File:Argentine_locro.jpg" target="_blank" rel="noopener">Fuente de la imagen</a>
+        </div>
+      </div>
+    </article><article class="recipe-card salado">
+      <div class="recipe-image-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Empanadas_de_carne_al_horno.jpg/1280px-Empanadas_de_carne_al_horno.jpg" alt="Fotografía de Empanadas de carne al horno" loading="lazy">
+        <span class="category-badge">Salado</span>
+      </div>
+      <div class="recipe-content">
+        <p class="recipe-time">1 h 15 min</p>
+        <h3>Empanadas de carne al horno</h3>
+        <p>Empanadas doradas al horno con un relleno sabroso y casero.</p>
+        <div class="recipe-actions">
+          <a class="button button-gold" href="recetarios/receta2.pdf" target="_blank" rel="noopener">Ver receta en PDF</a>
+          <a class="source-link" href="https://commons.wikimedia.org/wiki/File:Empanadas_de_carne_al_horno.jpg" target="_blank" rel="noopener">Fuente de la imagen</a>
+        </div>
+      </div>
+    </article><article class="recipe-card salado">
+      <div class="recipe-image-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Ratatouille.JPG/1280px-Ratatouille.JPG" alt="Fotografía de Ratatouille" loading="lazy">
+        <span class="category-badge">Salado</span>
+      </div>
+      <div class="recipe-content">
+        <p class="recipe-time">1 h</p>
+        <h3>Ratatouille</h3>
+        <p>Preparación de vegetales tiernos, aromáticos y llenos de color.</p>
+        <div class="recipe-actions">
+          <a class="button button-gold" href="recetarios/receta3.pdf" target="_blank" rel="noopener">Ver receta en PDF</a>
+          <a class="source-link" href="https://commons.wikimedia.org/wiki/File:Ratatouille.JPG" target="_blank" rel="noopener">Fuente de la imagen</a>
+        </div>
+      </div>
+    </article><article class="recipe-card dulce">
+      <div class="recipe-image-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flan-04926.jpg/1280px-Flan-04926.jpg" alt="Fotografía de Flan casero" loading="lazy">
+        <span class="category-badge">Dulce</span>
+      </div>
+      <div class="recipe-content">
+        <p class="recipe-time">1 h 15 min</p>
+        <h3>Flan casero</h3>
+        <p>Postre clásico de textura suave, acompañado con caramelo dorado.</p>
+        <div class="recipe-actions">
+          <a class="button button-gold" href="recetarios/receta4.pdf" target="_blank" rel="noopener">Ver receta en PDF</a>
+          <a class="source-link" href="https://commons.wikimedia.org/wiki/File:Flan-04926.jpg" target="_blank" rel="noopener">Fuente de la imagen</a>
+        </div>
+      </div>
+    </article><article class="recipe-card dulce">
+      <div class="recipe-image-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Alfajores_argentinos_-_2025.jpg/1280px-Alfajores_argentinos_-_2025.jpg" alt="Fotografía de Alfajores argentinos" loading="lazy">
+        <span class="category-badge">Dulce</span>
+      </div>
+      <div class="recipe-content">
+        <p class="recipe-time">1 h 30 min</p>
+        <h3>Alfajores argentinos</h3>
+        <p>Clásicos alfajores rellenos con dulce de leche, perfectos para la merienda.</p>
+        <div class="recipe-actions">
+          <a class="button button-gold" href="recetarios/receta5.pdf" target="_blank" rel="noopener">Ver receta en PDF</a>
+          <a class="source-link" href="https://commons.wikimedia.org/wiki/File:Alfajores_argentinos_-_2025.jpg" target="_blank" rel="noopener">Fuente de la imagen</a>
+        </div>
+      </div>
+    </article><article class="recipe-card dulce">
+      <div class="recipe-image-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NYCheesecake.jpg/1280px-NYCheesecake.jpg" alt="Fotografía de Cheesecake clásico" loading="lazy">
+        <span class="category-badge">Dulce</span>
+      </div>
+      <div class="recipe-content">
+        <p class="recipe-time">1 h 30 min + frío</p>
+        <h3>Cheesecake clásico</h3>
+        <p>Tarta cremosa de queso con base crocante y un acabado delicado.</p>
+        <div class="recipe-actions">
+          <a class="button button-gold" href="recetarios/receta6.pdf" target="_blank" rel="noopener">Ver receta en PDF</a>
+          <a class="source-link" href="https://commons.wikimedia.org/wiki/File:NYCheesecake.jpg" target="_blank" rel="noopener">Fuente de la imagen</a>
+        </div>
+      </div>
+    </article></div>
+    </div>
+  </section>
+
+  <section id="sitio" class="about-section" aria-labelledby="about-title">
+    <div><p class="eyebrow">QUIÉNES SOMOS</p><h2 id="about-title">Un recetario hecho para cocinar sin complicaciones</h2></div>
+    <div class="about-copy">
+      <p><strong>Sabor de Casa</strong> es un sitio web estático pensado para publicar recetas de cocina de dos categorías: salado y dulce.</p>
+      <p>El diseño prioriza legibilidad, contraste, navegación sencilla y adaptación a pantallas chicas. Todo el funcionamiento de filtrado se resuelve con HTML y CSS, sin scripts.</p>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact-section" aria-labelledby="contact-title">
+    <div class="contact-info">
+      <p class="eyebrow">CONTACTO</p><h2 id="contact-title">¿Querés dejarnos un mensaje?</h2>
+      <p>Usá el formulario para enviarnos una consulta, sugerencia o receta que te gustaría ver en el catálogo.</p>
+    </div>
+    <form class="contact-form" action="#" method="post">
+      <label for="nombre">Nombre</label><input id="nombre" name="nombre" type="text" autocomplete="name" required>
+      <label for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" required>
+      <label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+      <button class="button button-primary" type="submit">Enviar mensaje</button>
+      <p class="form-note">Formulario demostrativo: al ser un sitio estático no envía datos a un servidor.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div><strong>Sabor de Casa</strong><p>Recetario estático · HTML + CSS</p></div>
+  <p>© 2026 · Material de demostración</p>
+</footer>
+</body>
+</html>
